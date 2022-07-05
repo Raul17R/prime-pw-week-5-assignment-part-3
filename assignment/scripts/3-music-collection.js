@@ -16,14 +16,14 @@ function addToCollection(title,artist,yearPublished) {
     }
    
 
-addToCollection('The black parade.', 'My chemical romance', 2007);
-console.log (addToCollection('Brand new eyes.', 'Paramore', 2009))
+addToCollection('The black parade', 'My chemical romance', 2007);
+console.log (addToCollection('Brand new eyes', 'Paramore', 2009))
 console.log(collection);
 //console.log(addToCollection());
-console.log (addToCollection('Fallen.', 'Evanescence', 2003))
-console.log (addToCollection('Wehen we all fall asleep.', 'Billie Eilish', 2019))
-console.log (addToCollection('Bon Jovi.', 'Bon-Jovi', 1984))
-console.log (addToCollection('Paranoid.', 'Black sabbath', 1970))
+console.log (addToCollection('Fallen', 'Evanescence', 2003))
+console.log (addToCollection('Wehen we all fall asleep', 'Billie Eilish', 2019))
+console.log (addToCollection('Bon Jovi', 'Bon-Jovi', 1984))
+console.log (addToCollection('Paranoid', 'Black sabbath', 1970))
 console.table(collection);
 console.log('Over all collection', collection);
 
@@ -44,15 +44,15 @@ console.log(showCollection(collection));
 
 //let artist = '';
 function findByArtist(artistInput,collectionInput) {
-    for(let artist of collectionInput){
-        if(artistInput === collection.title){
-            console.log('Found a match');
-            return collection;
-        }
+    for (let i = 0; i < collection.length; i++) {
+        if (artistInput === collection[i].artist) {
+            return 'Found a match', collection[i];
+        } 
+        
     }
-    return;
 }
-const foundArtist = findByArtist('Evanescence',collection)
+   
+
+const foundArtist = findByArtist('Paramore',collection)
 console.log('Found artist',foundArtist);
 
-//I couldnt make this problem work, i think i was pretty close.
