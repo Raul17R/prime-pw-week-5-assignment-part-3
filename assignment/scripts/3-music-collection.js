@@ -41,7 +41,7 @@ function showCollection(arrayM) {
 console.log(showCollection(collection));
 
 
-
+//let search[];
 //let artist = '';
 function findByArtist(artistInput,collectionInput) {
     for (let i = 0; i < collection.length; i++) {
@@ -54,5 +54,7 @@ function findByArtist(artistInput,collectionInput) {
    
 
 const foundArtist = findByArtist('Paramore',collection)
-console.log('Found artist',foundArtist);
-
+console.log('Found artist: Paramore',foundArtist);
+console.log('Looking for Black sabbath',findByArtist('Black sabbath',collection));
+console.log('Looking for Billie Eilish',findByArtist('Billie Eilish',collection));
+//not sure how to save it into an array
