@@ -1,11 +1,11 @@
 console.log('***** Music Collection *****')
 
 const collection = [];
-let records = {
+/**let records = {
     name: "Brand new Eyes",
     artist: "Paramore",
     yearPublished: 2009,
-}
+}*/
 //console.log('This is my collection of Records:', collection);
 function addToCollection(title,artist,yearPublished) {
     //console.log('Add title of the record',title, 'Add Artist',artist,'Add Year',yearPublished);
@@ -43,12 +43,16 @@ console.log(showCollection(collection));
 
 
 //let artist = '';
-let search = [];
-function findByArtist(artist) { 
-    console.table(artist);
-     artist ='';
-     for (let searchArtist of artist){
-        
-     }
-
+function findByArtist(artistInput,collectionInput) {
+    for(let artist of collectionInput){
+        if(artistInput === collection.title){
+            console.log('Found a match');
+            return collection;
+        }
+    }
+    return;
 }
+const foundArtist = findByArtist('Evanescence',collection)
+console.log('Found artist',foundArtist);
+
+//I couldnt make this problem work, i think i was pretty close.
